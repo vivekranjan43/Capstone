@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h2>Add a new user</h2>
+
+<form class="form-horizontal">
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="firstName"><b>FirstName:</b></label>
+      <div class="col-sm-10">
+      <input  [(ngModel)]="u.firstName" type="text" class="form-control" placeholder="Enter FirstName" name="firstName" required />
+     </div>
+      </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="lastName"><b>Last Name:</b></label>
+      <div class="col-sm-10">
+      <input  [(ngModel)]="u.lastName" type="text" class="form-control" placeholder="Enter Last Name" name="lastName" required />
+      </div></div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="startDate"><b>Start date:</b></label>
+      <div class="col-sm-10">     
+      <input  [(ngModel)]="u.startDate" type="text" class="form-control" placeholder="Enter start Date (YYYY-mm-DD)" name="startDate" required />
+      </div></div>
+      <div class="form-group">
+      <label  class="control-label col-sm-2" for="userType"><b>User Type:</b></label>
+      <div class="col-sm-10">
+      <input  [(ngModel)]="u.userType" type="text" class="form-control" placeholder="Enter User Type" name="userType" required />
+      </div></div>
+      <button type="submit" class="btn btn-default" (click)="add()">Sign Up</button>
+
+      </form>
+</body>
+</html>
